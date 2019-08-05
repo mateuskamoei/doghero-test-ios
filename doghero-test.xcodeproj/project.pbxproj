@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C55C9DE22F8D9B000519CBA /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55C9DD22F8D9B000519CBA /* HeroModel.swift */; };
+		7C55C9E022F8DCD600519CBA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55C9DF22F8DCD600519CBA /* UserModel.swift */; };
 		A259F18A201CF66900B5164F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F189201CF66900B5164F /* AppDelegate.swift */; };
 		A259F18C201CF66900B5164F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F18B201CF66900B5164F /* ViewController.swift */; };
 		A259F18F201CF66900B5164F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A259F18D201CF66900B5164F /* Main.storyboard */; };
@@ -15,9 +17,13 @@
 		A259F19D201CF69F00B5164F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F19C201CF69F00B5164F /* UIImage.swift */; };
 		A259F1A0201CF6EA00B5164F /* MyHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F19F201CF6EA00B5164F /* MyHeroes.swift */; };
 		A259F1A2201CF76400B5164F /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F1A1201CF76400B5164F /* JSONParser.swift */; };
+		B482B3B8692046E419C3D887 /* Pods_doghero_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FCDADF32C7E78D2AFF23E1 /* Pods_doghero_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C55C9DD22F8D9B000519CBA /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		7C55C9DF22F8DCD600519CBA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A0FCDADF32C7E78D2AFF23E1 /* Pods_doghero_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doghero_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A259F186201CF66900B5164F /* doghero-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "doghero-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A259F189201CF66900B5164F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A259F18B201CF66900B5164F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +34,8 @@
 		A259F19C201CF69F00B5164F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		A259F19F201CF6EA00B5164F /* MyHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroes.swift; sourceTree = "<group>"; };
 		A259F1A1201CF76400B5164F /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		E315F3F846A1118D7A1F6EB4 /* Pods-doghero-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doghero-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-doghero-test/Pods-doghero-test.release.xcconfig"; sourceTree = "<group>"; };
+		FB67BAA26EFB845151CB0C97 /* Pods-doghero-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doghero-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-doghero-test/Pods-doghero-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,94 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B482B3B8692046E419C3D887 /* Pods_doghero_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C55C9DC22F8D82D00519CBA /* app-ui */ = {
+			isa = PBXGroup;
+			children = (
+				A259F192201CF66900B5164F /* LaunchScreen.storyboard */,
+				A259F18D201CF66900B5164F /* Main.storyboard */,
+			);
+			path = "app-ui";
+			sourceTree = "<group>";
+		};
+		7C7FA43B22F64824003E5CDF /* app-modules */ = {
+			isa = PBXGroup;
+			children = (
+				7C7FA43C22F6483C003E5CDF /* heroes-module */,
+			);
+			path = "app-modules";
+			sourceTree = "<group>";
+		};
+		7C7FA43C22F6483C003E5CDF /* heroes-module */ = {
+			isa = PBXGroup;
+			children = (
+				7C7FA44222F6486A003E5CDF /* view */,
+				7C7FA44122F64863003E5CDF /* presenter */,
+				7C7FA44022F6485F003E5CDF /* router */,
+				7C7FA43F22F64858003E5CDF /* interactor */,
+				7C7FA43E22F64852003E5CDF /* entity */,
+				7C7FA43D22F6484A003E5CDF /* protocols */,
+			);
+			path = "heroes-module";
+			sourceTree = "<group>";
+		};
+		7C7FA43D22F6484A003E5CDF /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		7C7FA43E22F64852003E5CDF /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				7C55C9DD22F8D9B000519CBA /* HeroModel.swift */,
+				7C55C9DF22F8DCD600519CBA /* UserModel.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		7C7FA43F22F64858003E5CDF /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		7C7FA44022F6485F003E5CDF /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		7C7FA44122F64863003E5CDF /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7C7FA44222F6486A003E5CDF /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		A259F17D201CF66900B5164F = {
 			isa = PBXGroup;
 			children = (
 				A259F188201CF66900B5164F /* doghero-test */,
 				A259F187201CF66900B5164F /* Products */,
+				F7749C6B0C7B618A519FDA09 /* Pods */,
+				D2675C1A3A530002AB8A99F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,13 +145,13 @@
 		A259F188201CF66900B5164F /* doghero-test */ = {
 			isa = PBXGroup;
 			children = (
+				7C55C9DC22F8D82D00519CBA /* app-ui */,
+				7C7FA43B22F64824003E5CDF /* app-modules */,
 				A259F19E201CF6D000B5164F /* Api Answer */,
 				A259F19B201CF69100B5164F /* Extensions */,
 				A259F189201CF66900B5164F /* AppDelegate.swift */,
 				A259F18B201CF66900B5164F /* ViewController.swift */,
-				A259F18D201CF66900B5164F /* Main.storyboard */,
 				A259F190201CF66900B5164F /* Assets.xcassets */,
-				A259F192201CF66900B5164F /* LaunchScreen.storyboard */,
 				A259F195201CF66900B5164F /* Info.plist */,
 			);
 			path = "doghero-test";
@@ -89,6 +174,23 @@
 			path = "Api Answer";
 			sourceTree = "<group>";
 		};
+		D2675C1A3A530002AB8A99F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0FCDADF32C7E78D2AFF23E1 /* Pods_doghero_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7749C6B0C7B618A519FDA09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB67BAA26EFB845151CB0C97 /* Pods-doghero-test.debug.xcconfig */,
+				E315F3F846A1118D7A1F6EB4 /* Pods-doghero-test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A259F198201CF66900B5164F /* Build configuration list for PBXNativeTarget "doghero-test" */;
 			buildPhases = (
+				A5B0DD5F2168047C6913871F /* [CP] Check Pods Manifest.lock */,
 				A259F182201CF66900B5164F /* Sources */,
 				A259F183201CF66900B5164F /* Frameworks */,
 				A259F184201CF66900B5164F /* Resources */,
+				1631A94BF3638E4797A20869 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,16 +260,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1631A94BF3638E4797A20869 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-doghero-test/Pods-doghero-test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-doghero-test/Pods-doghero-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5B0DD5F2168047C6913871F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-doghero-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A259F182201CF66900B5164F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A259F19D201CF69F00B5164F /* UIImage.swift in Sources */,
+				7C55C9E022F8DCD600519CBA /* UserModel.swift in Sources */,
 				A259F1A2201CF76400B5164F /* JSONParser.swift in Sources */,
 				A259F1A0201CF6EA00B5164F /* MyHeroes.swift in Sources */,
 				A259F18C201CF66900B5164F /* ViewController.swift in Sources */,
 				A259F18A201CF66900B5164F /* AppDelegate.swift in Sources */,
+				7C55C9DE22F8D9B000519CBA /* HeroModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +457,7 @@
 		};
 		A259F199201CF66900B5164F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB67BAA26EFB845151CB0C97 /* Pods-doghero-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +472,7 @@
 		};
 		A259F19A201CF66900B5164F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E315F3F846A1118D7A1F6EB4 /* Pods-doghero-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
