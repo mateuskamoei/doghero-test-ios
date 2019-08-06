@@ -9,14 +9,13 @@
 import Foundation
 import ObjectMapper
 
-class HeroInteractor {
-    weak var presenter: InteractorToPresenterProtocol?
+class HeroInteractor: PresenterToInteractorProtocol {
+    var presenter: InteractorToPresenterProtocol?
     
-    func fetchHeroes() {
+    func fetchHero() {
         let heroes = MyHeroes.apiAnswer
         let recentHeroesArray = Mapper<HeroModel>().mapArray(JSONArray: heroes["recents"] as! [[String: Any]])
         let favoriteHeroesArray = Mapper<HeroModel>().mapArray(JSONArray: heroes["favorites"] as! [[String: Any]])
         presenter?.heroesFetchedSuccess(recents: recentHeroesArray, favorites: favoriteHeroesArray)
     }
-    
 }

@@ -12,6 +12,9 @@
 		7C55C9E222F8F78300519CBA /* HeroInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55C9E122F8F78300519CBA /* HeroInteractor.swift */; };
 		7C55C9E422F8F8CE00519CBA /* HeroProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55C9E322F8F8CE00519CBA /* HeroProtocols.swift */; };
 		7C55C9EC22F8F95A00519CBA /* doghero_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55C9EB22F8F95A00519CBA /* doghero_testTests.swift */; };
+		7C55C9F522F8FED800519CBA /* HeroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55C9F422F8FED800519CBA /* HeroRouter.swift */; };
+		7C55C9F722F8FF4C00519CBA /* HeroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55C9F622F8FF4C00519CBA /* HeroTableViewController.swift */; };
+		7CE3838D22FA001A00D44557 /* HeroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE3838C22FA001A00D44557 /* HeroPresenter.swift */; };
 		A259F18A201CF66900B5164F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F189201CF66900B5164F /* AppDelegate.swift */; };
 		A259F18C201CF66900B5164F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F18B201CF66900B5164F /* ViewController.swift */; };
 		A259F18F201CF66900B5164F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A259F18D201CF66900B5164F /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 		7C55C9E922F8F95A00519CBA /* doghero-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doghero-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C55C9EB22F8F95A00519CBA /* doghero_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doghero_testTests.swift; sourceTree = "<group>"; };
 		7C55C9ED22F8F95A00519CBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C55C9F422F8FED800519CBA /* HeroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRouter.swift; sourceTree = "<group>"; };
+		7C55C9F622F8FF4C00519CBA /* HeroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewController.swift; sourceTree = "<group>"; };
+		7CE3838C22FA001A00D44557 /* HeroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPresenter.swift; sourceTree = "<group>"; };
 		A0FCDADF32C7E78D2AFF23E1 /* Pods_doghero_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doghero_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A259F186201CF66900B5164F /* doghero-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "doghero-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A259F189201CF66900B5164F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,14 @@
 			path = "doghero-testTests";
 			sourceTree = "<group>";
 		};
+		7C55C9F322F8FE8100519CBA /* app-settings */ = {
+			isa = PBXGroup;
+			children = (
+				A259F189201CF66900B5164F /* AppDelegate.swift */,
+			);
+			path = "app-settings";
+			sourceTree = "<group>";
+		};
 		7C7FA43B22F64824003E5CDF /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +156,7 @@
 		7C7FA44022F6485F003E5CDF /* router */ = {
 			isa = PBXGroup;
 			children = (
+				7C55C9F422F8FED800519CBA /* HeroRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -149,6 +164,7 @@
 		7C7FA44122F64863003E5CDF /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				7CE3838C22FA001A00D44557 /* HeroPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -156,6 +172,7 @@
 		7C7FA44222F6486A003E5CDF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				7C55C9F622F8FF4C00519CBA /* HeroTableViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -183,11 +200,11 @@
 		A259F188201CF66900B5164F /* doghero-test */ = {
 			isa = PBXGroup;
 			children = (
+				7C55C9F322F8FE8100519CBA /* app-settings */,
 				7C55C9DC22F8D82D00519CBA /* app-ui */,
 				7C7FA43B22F64824003E5CDF /* app-modules */,
 				A259F19E201CF6D000B5164F /* Api Answer */,
 				A259F19B201CF69100B5164F /* Extensions */,
-				A259F189201CF66900B5164F /* AppDelegate.swift */,
 				A259F18B201CF66900B5164F /* ViewController.swift */,
 				A259F190201CF66900B5164F /* Assets.xcassets */,
 				A259F195201CF66900B5164F /* Info.plist */,
@@ -393,10 +410,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE3838D22FA001A00D44557 /* HeroPresenter.swift in Sources */,
 				7C55C9E222F8F78300519CBA /* HeroInteractor.swift in Sources */,
 				A259F19D201CF69F00B5164F /* UIImage.swift in Sources */,
 				7C55C9E022F8DCD600519CBA /* UserModel.swift in Sources */,
+				7C55C9F722F8FF4C00519CBA /* HeroTableViewController.swift in Sources */,
 				A259F1A2201CF76400B5164F /* JSONParser.swift in Sources */,
+				7C55C9F522F8FED800519CBA /* HeroRouter.swift in Sources */,
 				A259F1A0201CF6EA00B5164F /* MyHeroes.swift in Sources */,
 				A259F18C201CF66900B5164F /* ViewController.swift in Sources */,
 				A259F18A201CF66900B5164F /* AppDelegate.swift in Sources */,

@@ -35,7 +35,7 @@ class doghero_testTests: XCTestCase {
     func testInteractor() {
         let heroInteractor = HeroInteractor()
         heroInteractor.presenter = self
-        heroInteractor.fetchHeroes()
+        heroInteractor.fetchHero()
     }
 }
 
