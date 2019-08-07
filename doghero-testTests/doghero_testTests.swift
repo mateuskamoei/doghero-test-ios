@@ -11,6 +11,9 @@ import XCTest
 
 class doghero_testTests: XCTestCase {
 
+    var recents: [HeroModel]!
+    var favorites: [HeroModel]!
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -36,14 +39,24 @@ class doghero_testTests: XCTestCase {
         let heroInteractor = HeroInteractor()
         heroInteractor.presenter = self
         heroInteractor.fetchHero()
+        
+        let firstRecentHeroFavorite = recents[0].isFavorite
+        heroInteractor.toggleHeroFavorite(indexPath: IndexPath(row: 0, section: 0), recents: recents, favorites: favorites)
+        XCTAssertEqual(firstRecentHeroFavorite, !recents[0].isFavorite)
     }
 }
 
 extension doghero_testTests: InteractorToPresenterProtocol {
     
     func heroesFetchedSuccess(recents: [HeroModel], favorites: [HeroModel]) {
+        self.recents = recents
+        self.favorites = favorites
         XCTAssertGreaterThan(recents.count, 0)
         XCTAssertGreaterThan(favorites.count, 0)
+    }
+    
+    func toggleHeroFavoriteSuccess(recents: [HeroModel], favorites: [HeroModel]) {
+        
     }
     
 }

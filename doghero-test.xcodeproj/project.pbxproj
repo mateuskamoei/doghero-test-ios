@@ -19,6 +19,7 @@
 		7CE3839122FA28CD00D44557 /* HeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE3839022FA28CD00D44557 /* HeroHeaderView.swift */; };
 		7CE3839322FA28DB00D44557 /* HeroHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE3839222FA28DB00D44557 /* HeroHeaderView.xib */; };
 		7CE3839522FA6CFC00D44557 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE3839422FA6CFC00D44557 /* NSMutableAttributedString.swift */; };
+		7CE3839D22FB345A00D44557 /* doghero_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE3839C22FB345A00D44557 /* doghero_testUITests.swift */; };
 		A259F18A201CF66900B5164F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F189201CF66900B5164F /* AppDelegate.swift */; };
 		A259F18C201CF66900B5164F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259F18B201CF66900B5164F /* ViewController.swift */; };
 		A259F18F201CF66900B5164F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A259F18D201CF66900B5164F /* Main.storyboard */; };
@@ -32,6 +33,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		7C55C9EE22F8F95A00519CBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A259F17E201CF66900B5164F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A259F185201CF66900B5164F;
+			remoteInfo = "doghero-test";
+		};
+		7CE3839F22FB345A00D44557 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A259F17E201CF66900B5164F /* Project object */;
 			proxyType = 1;
@@ -55,6 +63,9 @@
 		7CE3839022FA28CD00D44557 /* HeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderView.swift; sourceTree = "<group>"; };
 		7CE3839222FA28DB00D44557 /* HeroHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroHeaderView.xib; sourceTree = "<group>"; };
 		7CE3839422FA6CFC00D44557 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		7CE3839A22FB345A00D44557 /* doghero-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doghero-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE3839C22FB345A00D44557 /* doghero_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doghero_testUITests.swift; sourceTree = "<group>"; };
+		7CE3839E22FB345A00D44557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0FCDADF32C7E78D2AFF23E1 /* Pods_doghero_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doghero_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A259F186201CF66900B5164F /* doghero-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "doghero-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A259F189201CF66900B5164F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +83,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		7C55C9E622F8F95A00519CBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CE3839722FB345A00D44557 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -188,11 +206,21 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		7CE3839B22FB345A00D44557 /* doghero-testUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7CE3839C22FB345A00D44557 /* doghero_testUITests.swift */,
+				7CE3839E22FB345A00D44557 /* Info.plist */,
+			);
+			path = "doghero-testUITests";
+			sourceTree = "<group>";
+		};
 		A259F17D201CF66900B5164F = {
 			isa = PBXGroup;
 			children = (
 				A259F188201CF66900B5164F /* doghero-test */,
 				7C55C9EA22F8F95A00519CBA /* doghero-testTests */,
+				7CE3839B22FB345A00D44557 /* doghero-testUITests */,
 				A259F187201CF66900B5164F /* Products */,
 				F7749C6B0C7B618A519FDA09 /* Pods */,
 				D2675C1A3A530002AB8A99F9 /* Frameworks */,
@@ -204,6 +232,7 @@
 			children = (
 				A259F186201CF66900B5164F /* doghero-test.app */,
 				7C55C9E922F8F95A00519CBA /* doghero-testTests.xctest */,
+				7CE3839A22FB345A00D44557 /* doghero-testUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +308,24 @@
 			productReference = 7C55C9E922F8F95A00519CBA /* doghero-testTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7CE3839922FB345A00D44557 /* doghero-testUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CE383A322FB345B00D44557 /* Build configuration list for PBXNativeTarget "doghero-testUITests" */;
+			buildPhases = (
+				7CE3839622FB345A00D44557 /* Sources */,
+				7CE3839722FB345A00D44557 /* Frameworks */,
+				7CE3839822FB345A00D44557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CE383A022FB345A00D44557 /* PBXTargetDependency */,
+			);
+			name = "doghero-testUITests";
+			productName = "doghero-testUITests";
+			productReference = 7CE3839A22FB345A00D44557 /* doghero-testUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A259F185201CF66900B5164F /* doghero-test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A259F198201CF66900B5164F /* Build configuration list for PBXNativeTarget "doghero-test" */;
@@ -313,6 +360,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = A259F185201CF66900B5164F;
 					};
+					7CE3839922FB345A00D44557 = {
+						CreatedOnToolsVersion = 10.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A259F185201CF66900B5164F;
+					};
 					A259F185201CF66900B5164F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -334,12 +386,20 @@
 			targets = (
 				A259F185201CF66900B5164F /* doghero-test */,
 				7C55C9E822F8F95A00519CBA /* doghero-testTests */,
+				7CE3839922FB345A00D44557 /* doghero-testUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7C55C9E722F8F95A00519CBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CE3839822FB345A00D44557 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,6 +479,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7CE3839622FB345A00D44557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CE3839D22FB345A00D44557 /* doghero_testUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A259F182201CF66900B5164F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +516,11 @@
 			isa = PBXTargetDependency;
 			target = A259F185201CF66900B5164F /* doghero-test */;
 			targetProxy = 7C55C9EE22F8F95A00519CBA /* PBXContainerItemProxy */;
+		};
+		7CE383A022FB345A00D44557 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A259F185201CF66900B5164F /* doghero-test */;
+			targetProxy = 7CE3839F22FB345A00D44557 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -511,6 +584,47 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/doghero-test.app/doghero-test";
+			};
+			name = Release;
+		};
+		7CE383A122FB345A00D44557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L86J8X38JC;
+				INFOPLIST_FILE = "doghero-testUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mateuskamoei.doghero-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "doghero-test";
+			};
+			name = Debug;
+		};
+		7CE383A222FB345A00D44557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L86J8X38JC;
+				INFOPLIST_FILE = "doghero-testUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mateuskamoei.doghero-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "doghero-test";
 			};
 			name = Release;
 		};
@@ -659,6 +773,15 @@
 			buildConfigurations = (
 				7C55C9F122F8F95A00519CBA /* Debug */,
 				7C55C9F222F8F95A00519CBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CE383A322FB345B00D44557 /* Build configuration list for PBXNativeTarget "doghero-testUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CE383A122FB345A00D44557 /* Debug */,
+				7CE383A222FB345A00D44557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
