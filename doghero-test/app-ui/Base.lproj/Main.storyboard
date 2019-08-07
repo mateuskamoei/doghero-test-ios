@@ -153,6 +153,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.93725490199999995" green="0.2274509804" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.93725490199999995" green="0.2274509804" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="w6t-Du-Xxz" kind="relationship" relationship="viewControllers" id="haI-4b-CvT"/>
@@ -166,7 +168,7 @@
         <scene sceneID="DRt-67-cC7">
             <objects>
                 <navigationController title="Meus Heróis" automaticallyAdjustsScrollViewInsets="NO" id="w6t-Du-Xxz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="V4E-LR-t5N"/>
+                    <tabBarItem key="tabBarItem" title="Heróis" image="icon_heart_unfilled" id="V4E-LR-t5N"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1Yf-mf-0iF">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
