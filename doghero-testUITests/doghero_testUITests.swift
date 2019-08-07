@@ -40,7 +40,7 @@ class doghero_testUITests: XCTestCase {
         let unfavoriteButton = tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"Eduardo")/*[[".cells.containing(.staticText, identifier:\"R$55\")",".cells.containing(.staticText, identifier:\"Parque Chacabuco\")",".cells.containing(.staticText, identifier:\"Eduardo\")"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["icon heart filled"]
         XCTAssertTrue(unfavoriteButton.exists)
         unfavoriteButton.tap()
-        XCTAssertTrue(tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"Eduardo")/*[[".cells.containing(.staticText, identifier:\"R$55\")",".cells.containing(.staticText, identifier:\"Parque Chacabuco\")",".cells.containing(.staticText, identifier:\"Eduardo\")"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["icon heart unfilled"].exists)
+        XCTAssertTrue(favoriteButton.exists)
         XCTAssertFalse(unfavoriteButton.exists)
     }
 
