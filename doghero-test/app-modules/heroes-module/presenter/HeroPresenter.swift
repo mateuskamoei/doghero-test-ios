@@ -17,11 +17,19 @@ class HeroPresenter: ViewToPresenterProtocol {
     func startFetchingHero() {
         interactor?.fetchHero()
     }
+    
+    func startTogglingHeroFavorite(indexPath: IndexPath, recents: [HeroModel], favorites: [HeroModel]) {
+        interactor?.toggleHeroFavorite(indexPath: indexPath, recents: recents, favorites: favorites)
+    }
 }
 
 extension HeroPresenter: InteractorToPresenterProtocol{
     
     func heroesFetchedSuccess(recents: [HeroModel], favorites: [HeroModel]) {
+        view?.showHero(recents: recents, favorites: favorites)
+    }
+    
+    func toggleHeroFavoriteSuccess(recents: [HeroModel], favorites: [HeroModel]) {
         view?.showHero(recents: recents, favorites: favorites)
     }
 }

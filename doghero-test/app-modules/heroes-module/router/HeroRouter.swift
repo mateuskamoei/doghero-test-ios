@@ -18,7 +18,8 @@ class HeroRouter: PresenterToRouterProtocol {
     static func createModule() -> UITabBarController {
         
         let tabBar = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-        let view = tabBar.viewControllers?.first as! HeroTableViewController
+        let navigationController = tabBar.viewControllers?.first as! UINavigationController
+        let view = navigationController.viewControllers.first as! HeroTableViewController
         
         let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = HeroPresenter()
         let interactor: PresenterToInteractorProtocol = HeroInteractor()

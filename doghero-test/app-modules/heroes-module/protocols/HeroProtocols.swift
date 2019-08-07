@@ -11,6 +11,7 @@ import UIKit
 
 protocol InteractorToPresenterProtocol: class {
     func heroesFetchedSuccess(recents: [HeroModel], favorites: [HeroModel])
+    func toggleHeroFavoriteSuccess(recents: [HeroModel], favorites: [HeroModel])
 }
 
 protocol ViewToPresenterProtocol: class{
@@ -19,8 +20,7 @@ protocol ViewToPresenterProtocol: class{
     var interactor: PresenterToInteractorProtocol? {get set}
     var router: PresenterToRouterProtocol? {get set}
     func startFetchingHero()
-//    func showMovieController(navigationController:UINavigationController)
-    
+    func startTogglingHeroFavorite(indexPath: IndexPath, recents: [HeroModel], favorites: [HeroModel])
 }
 
 protocol PresenterToViewProtocol: class{
@@ -35,4 +35,5 @@ protocol PresenterToRouterProtocol: class {
 protocol PresenterToInteractorProtocol: class {
     var presenter:InteractorToPresenterProtocol? {get set}
     func fetchHero()
+    func toggleHeroFavorite(indexPath: IndexPath, recents: [HeroModel], favorites: [HeroModel])
 }

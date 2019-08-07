@@ -18,4 +18,15 @@ class HeroInteractor: PresenterToInteractorProtocol {
         let favoriteHeroesArray = Mapper<HeroModel>().mapArray(JSONArray: heroes["favorites"] as! [[String: Any]])
         presenter?.heroesFetchedSuccess(recents: recentHeroesArray, favorites: favoriteHeroesArray)
     }
+    
+    func toggleHeroFavorite(indexPath: IndexPath, recents: [HeroModel], favorites: [HeroModel]) {
+        let hero: HeroModel
+        if indexPath.section == 0 {
+            hero = recents[indexPath.row]
+        } else {
+            hero = favorites[indexPath.row]
+        }
+        hero.isFavorite = !hero.isFavorite
+        presenter?.toggleHeroFavoriteSuccess(recents: recents, favorites: favorites)
+    }
 }

@@ -20,6 +20,7 @@ class HeroModel: Mappable {
     internal var user: UserModel?
     internal var address: String?
     internal var price: Int?
+    internal var isFavorite = false
     
     required init?(map: Map) {
         mapping(map: map)
